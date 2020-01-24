@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header__title">
+        <%= link_to "Our Blog", root_path, class: "header__title--text" %>
+      </div>
+      <div class="header__right">
+        <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+      </div>
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
   </body>
 </html>
